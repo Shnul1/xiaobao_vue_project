@@ -5,6 +5,14 @@ body,
     width: 375px;
 }
 
+html{
+    font-size: 100px;
+}
+
+body{
+    font-size: .14rem;
+}
+
 *{
     padding: 0;
     margin: 0;
