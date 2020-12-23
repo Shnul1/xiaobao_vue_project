@@ -32,6 +32,7 @@
                         />
                     </van-popup>
                 </div>
+                <product-info></product-info>
             </div>
         </div>
         <product-bottom></product-bottom>
@@ -41,7 +42,7 @@
 <script>
 import ProductBottom from '@/components/purchase_bottom.vue'
 import ProductNav from '@/components/nav.vue'
-
+import ProductInfo from '@/components/course.vue'
 const coupon1={
         id: 1,
         condition: '满 30000元 使用',
@@ -62,17 +63,28 @@ const coupon2={
         startAt: 1559104000,
         endAt: 1574592000,
     }
+const coupon3={
+        id: 3,
+        condition: '满 30000元 使用',
+        originCondition: 30000,
+        reason: '订单未满30000元',
+        value: 2000,
+        name: '新年优惠促销',
+        startAt: 1559104000,
+        endAt: 1574592000,
+    }
 
 export default {
     components: {
         'product-bottom': ProductBottom,
         'product-nav': ProductNav,
+        'product-info': ProductInfo,
     },
     data() {
         return {
             showList: true,
             chosenCoupon: -1,
-            coupons: [coupon1, coupon2],
+            coupons: [coupon1, coupon2, coupon3],
             disabledCoupons: [],
             course: {
                 
