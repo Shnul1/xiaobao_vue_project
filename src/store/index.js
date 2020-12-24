@@ -6,14 +6,17 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     course: [
-      {id: 1, 
+      { id: 1, 
+        url: "../assets/images/course.jpg",
         name: "英语教育系列课程", 
         price: "139.7", 
         date: "8月26日-9月1日", 
         time: "每周四 18:00-19:00", 
         restStudent: "20", 
         student: "53",
-        period: [10, 20, 30]
+        period: [10, 20, 30],
+        className: "三年级201班",
+        courseDetail: "主题式教学，将英语生活话，融入点滴生活，帮助您的孩子顺利起步少儿英语课程，把字母和单词学习融化在丰富多彩的儿歌和游戏中，结合生动的肢体语言，趣味口诀，课堂游戏帮助孩子记忆和书写单词。"
       }
     ],
     coupons: [

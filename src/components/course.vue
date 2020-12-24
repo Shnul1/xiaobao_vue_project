@@ -15,11 +15,11 @@
                 </div>
                 <div class="course-student">
                     <van-icon name="friends-o" size=".18rem"/>
-                    <div class="course-student-left">剩余名额  </div>  
+                    <div class="course-student-left">剩余名额 {{$store.state.course[0].restStudent}}</div>  
                 </div>
             </div>
             <div class="course-period">
-                <div class="period-btn" v-for="item in $store.state.course[0].period" :key="item">{{item}}课时</div>
+                <div class="period-btn" v-for="item in $store.state.course[0].period" :key="item" @click="priceSum">{{item}}课时</div>
             </div>
         </div>
         <div class="course-detail-container">
@@ -28,8 +28,7 @@
                     <div class="course-detail-icon"></div>
                     <div class="course-detail-title">课程详情</div>
                 </div>
-                <div class="course-detail-text">主题式教学，将英语生活话，融入点滴生活，帮助您的孩子顺利起步少儿英语课程，把字母和单词学习融化在丰富多彩的儿歌和游戏中，结合生动的肢体语言，趣味口诀，课堂游戏帮助孩子记忆和书写单词。
-                </div>
+                <div class="course-detail-text">{{$store.state.course[0].courseDetail}}</div>
                 <div class="course-detail-image"></div>
             </div>
         </div>
@@ -38,7 +37,12 @@
 
 <script>
 export default {
-    
+    props: [item],
+    methods: {
+        priceSum(item){
+            
+        }
+    }
 }
 </script>
 

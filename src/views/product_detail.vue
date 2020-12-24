@@ -34,7 +34,7 @@
                         />
                     </van-popup>
                 </div>
-                <product-info></product-info>
+                <product-info :item="item"></product-info>
             </div>
         </div>
         <product-bottom></product-bottom>
@@ -91,7 +91,8 @@ export default {
             course: {
                 price: 139.7,
                 student: 53,
-            }
+            },
+            item: $store.state.course[0].period
         }
     },
     methods: {
@@ -99,6 +100,9 @@ export default {
             this.showList = false;
             this.chosenCoupon = index;
         },
+    },
+    computed: {
+
     },
 }
 </script>
