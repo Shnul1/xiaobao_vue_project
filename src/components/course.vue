@@ -37,7 +37,9 @@
 
 <script>
 export default {
-    props: [item],
+    props: {
+        priceCount: Number
+    },
     methods: {
         priceSum(item){
             

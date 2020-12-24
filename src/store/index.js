@@ -6,7 +6,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     course: [
-      { id: 1, 
+      { 
+        id: 1, 
         url: "../assets/images/course.jpg",
         name: "英语教育系列课程", 
         price: "139.7", 

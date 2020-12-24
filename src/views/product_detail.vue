@@ -34,7 +34,7 @@
                         />
                     </van-popup>
                 </div>
-                <product-info :item="item"></product-info>
+                <product-info :priceCount="priceCount"></product-info>
             </div>
         </div>
         <product-bottom></product-bottom>
@@ -45,36 +45,6 @@
 import ProductBottom from '@/components/purchase_bottom.vue'
 import ProductNav from '@/components/nav.vue'
 import ProductInfo from '@/components/course.vue'
-const coupon1={
-        id: 1,
-        condition: '满 30000元 使用',
-        originCondition: 30000*100,
-        reason: '订单未满30000元',
-        value: 2000*100,
-        name: '新年优惠促销',
-        startAt: 1557910400,
-        endAt: 1574592000,
-    }
-const coupon2={
-        id: 2,
-        condition: '满 30000元 使用',
-        originCondition: 30000*100,
-        reason: '订单未满30000元',
-        value: 2000*100,
-        name: '新年优惠促销',
-        startAt: 1559104000,
-        endAt: 1574592000,
-    }
-const coupon3={
-        id: 3,
-        condition: '满 20000元 使用',
-        originCondition: 20000*100,
-        reason: '订单未满20000元',
-        value: 1000*100,
-        name: '新年优惠促销',
-        startAt: 1559104000,
-        endAt: 1574592000,
-    }
 
 export default {
     components: {
@@ -92,7 +62,7 @@ export default {
                 price: 139.7,
                 student: 53,
             },
-            item: $store.state.course[0].period
+            priceCount: 0,
         }
     },
     methods: {
