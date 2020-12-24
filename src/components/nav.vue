@@ -1,5 +1,5 @@
 <template>
-    <header class="product-nav">
+    <div class="product-nav">
         <div class="product-nav-container">
             <div class="nav-left">
                 <van-icon name="arrow-left" size='.18rem' class="nav-back-icon"/>
@@ -12,7 +12,7 @@
                 </div>
             </div>
         </div>
-    </header>
+    </div>
 </template>
 
 <script>
@@ -23,16 +23,19 @@ export default {
 
 <style lang="less" scoped>
 .product-nav{
-    width: 3.75rem;
+    width: 100%;
     height: .44rem;
-    top: 0;
     position: fixed;
+    top: 0;
+    
     .product-nav-container{
+        background: white;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         height: 100%;
+        z-index: 999;
         .nav-left{
             display: flex;
             width: 1.28rem;

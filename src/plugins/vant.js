@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { Col, Row, Icon, CouponCell, CouponList, Popup } from 'vant';
+import { Col, Row, Icon, CouponCell, CouponList, Popup, } from 'vant';
 
 Vue.use(Col);
 Vue.use(Row);

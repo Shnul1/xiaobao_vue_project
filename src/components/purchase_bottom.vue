@@ -34,6 +34,7 @@ export default {
     position: fixed;
     align-items: center;
     bottom: 0;
+    z-index: 999;
     .shopping-cart{
         position: absolute;
         left: .2rem;

@@ -1,19 +1,21 @@
 <template>
     <div id='product_course'>
         <product-nav></product-nav>
+        <div style="height:.44rem"></div>
         <div class="container">
             <div class="course-picture"></div>
             <div class="course">
                 <div class="course-nav">
-                    <div class="course-price">{{course.price}}</div>
-                    <div class="course-student-number">{{course.student}}</div>
+                    <div class="course-price-icon">￥</div>
+                    <div class="course-price">{{$store.state.course[0].price}}</div>
+                    <div class="course-student-number">{{$store.state.course[0].student}}人已报名</div>
                 </div>
                 <div class="coupon-container">
                     <van-coupon-cell
                         title="优惠券列表"
                         :style="{'font-family': 'PingFangSC-Medium, PingFang SC', 'color': '#151E26', 'font-weight': '400'}"
                         class="coupon-cell"
-                        :coupons="coupons"
+                        :coupons="$store.state.coupons"
                         :chosen-coupon="chosenCoupon"
                         @click="showList=true"
                     />
@@ -24,7 +26,7 @@
                         style="height: 60%; padding-top: 3px;"
                         >
                         <van-coupon-list
-                            :coupons="coupons"
+                            :coupons="$store.state.coupons"
                             :chosen-coupon="chosenCoupon"
                             :disabled-coupons="disabledCoupons"
                             :show-exchange-bar="false"
@@ -46,9 +48,9 @@ import ProductInfo from '@/components/course.vue'
 const coupon1={
         id: 1,
         condition: '满 30000元 使用',
-        originCondition: 30000,
+        originCondition: 30000*100,
         reason: '订单未满30000元',
-        value: 2000,
+        value: 2000*100,
         name: '新年优惠促销',
         startAt: 1557910400,
         endAt: 1574592000,
@@ -56,19 +58,19 @@ const coupon1={
 const coupon2={
         id: 2,
         condition: '满 30000元 使用',
-        originCondition: 30000,
+        originCondition: 30000*100,
         reason: '订单未满30000元',
-        value: 2000,
+        value: 2000*100,
         name: '新年优惠促销',
         startAt: 1559104000,
         endAt: 1574592000,
     }
 const coupon3={
         id: 3,
-        condition: '满 30000元 使用',
-        originCondition: 30000,
-        reason: '订单未满30000元',
-        value: 2000,
+        condition: '满 20000元 使用',
+        originCondition: 20000*100,
+        reason: '订单未满20000元',
+        value: 1000*100,
         name: '新年优惠促销',
         startAt: 1559104000,
         endAt: 1574592000,
@@ -82,19 +84,20 @@ export default {
     },
     data() {
         return {
-            showList: true,
+            showList: false,
             chosenCoupon: -1,
             coupons: [coupon1, coupon2, coupon3],
             disabledCoupons: [],
             course: {
-                
+                price: 139.7,
+                student: 53,
             }
         }
     },
     methods: {
         onChange(index) {
-        this.showList = false;
-        this.chosenCoupon = index;
+            this.showList = false;
+            this.chosenCoupon = index;
         },
     },
 }
@@ -102,12 +105,16 @@ export default {
 
 <style lang="less" scoped>
 .container{
-    position: relative;
     width: 100%;
+    height: calc(100vh - 1.12rem);
+    overflow: auto;
 }
 
+.container::-webkit-scrollbar {
+   display: none;
+} 
+
 .course-picture{
-    margin-top: .44rem;
     width: 100%;
     height: 2.5rem;
     z-index: 5;
@@ -115,18 +122,50 @@ export default {
 }
 
 .course{
-    position: absolute;
+    position: relative;
     width: 100%;
-    top: 2.2rem;
+    top: -.2rem;
     z-index: 10;
-
     .course-nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
         width: 100%;
         height: .7rem;
         border-radius: .2rem .2rem 0 0;
         background: linear-gradient(to right, rgb(255, 62, 62) , rgb(255, 90, 133));
+        .course-price{
+            height: .25rem;
+            width: 1.65rem;
+            color: white;
+            font-size: .25rem;
+            font-family: PingFangSC-Medium, PingFang SC;
+            font-weight: 530;
+            line-height: .25rem;
+            
+        }
+        .course-price-icon{
+            position: absolute;
+            left: .2rem;
+            display: block;
+            height: .125rem;
+            width: .125rem;
+            color: white;
+            font-size: .125rem;                                                            
+            font-family: PingFangSC-Medium, PingFang SC;
+            font-weight: 530;
+            line-height: .125rem;  
+        }
+        .course-student-number{
+            width: .75rem;
+            height: .2rem;
+            color: white;
+            font-size: .125rem;
+            font-family: PingFangSC-Medium, PingFang SC;
+            line-height: .2rem; 
+        }
     }
-
     .coupon-container{
     width: 100%;
     height: .5rem;
@@ -135,6 +174,4 @@ export default {
         }
     }
 }
-
-
 </style>
