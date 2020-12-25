@@ -91,6 +91,7 @@ export default {
     width: 100%;
     height: 2.5rem;
     z-index: 5;
+    background-image: url(../assets/images/course.jpg);
 }
 
 .course{
