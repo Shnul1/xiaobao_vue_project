@@ -7,7 +7,7 @@
             <div class="nav-center">商品详情</div>
             <div class="nav-right">
                 <div class="nav-right-icon">
-                    <img src="../assets/images/退出.png" class="exit-icon">
+                    <img src="../assets/images/退出.png" class="exit-icon" @click="exit()">
                     <img src="../assets/images/详情.png" class="detail-icon">
                 </div>
             </div>
@@ -17,7 +17,11 @@
 
 <script>
 export default {
-    
+    methods: {
+        exit() {
+            this.$router.push({ path: 'coupon' })
+        }
+    }
 }
 </script>
 

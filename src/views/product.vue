@@ -11,10 +11,8 @@
                     <div class="course-student-number">{{$store.state.course[0].student}}人已报名</div>
                 </div>
                 <div class="coupon-container">
-                    <van-coupon-cell
+                    <van-coupon-cell class="coupon-cell"
                         title="优惠券列表"
-                        :style="{'font-family': 'PingFangSC-Medium, PingFang SC', 'color': '#151E26', 'font-weight': '400'}"
-                        class="coupon-cell"
                         :coupons="$store.state.coupons"
                         :chosen-coupon="chosenCoupon"
                         @click="showList=true"
@@ -144,21 +142,14 @@ export default {
     width: 100%;
     height: .5rem;
         .coupon-cell{
+            display: flex;
+            align-items: center;
             height: .5rem;
-        }
-        .coupon-list{
-            .van-coupon__amount{
-                width: 47px;
-                height: 24px;
-                font-size: 26px;
-                font-family: PingFangSC-Medium, PingFang SC;
-                font-weight: 500;
-                color: #FF340F;
-                line-height: 24px;
-                text-shadow: 0px 2px 6px rgba(203, 202, 202, 0.5);
-            }
-            .van-coupon__condition{
-
+            font-family: PingFangSC-Medium, PingFang SC;
+            color: #FF3F3F;
+            font-weight: 400;
+            .van-cell__title{
+                line-height: .3rem;
             }
         }
     }

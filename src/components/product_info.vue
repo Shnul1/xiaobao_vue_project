@@ -2,16 +2,16 @@
     <div class="course-container">
         <div class="course-container-info">
             <div class="course-info">
-                <div class="course-name">英语教育系列课程</div>
+                <div class="course-name">{{$store.state.course[0].courseClass}}</div>
                 <div class="course-class">
                     <div class="course-class-icon">班</div>
-                    <div class="course-class-name">少儿英语A1班</div>
+                    <div class="course-class-name">{{$store.state.course[0].name}}</div>
                 </div>
                 <div class="course-time">
                     <van-icon name="underway-o" size=".18rem"/>
-                    <div class="course-time-date">8月26日-9月1日</div>
+                    <div class="course-time-date">{{$store.state.course[0].date}}</div>
                     <div class="course-everytime-icon"></div>
-                    <div class="course-everytime">每周四 18:00-19:00</div>
+                    <div class="course-everytime">{{$store.state.course[0].time}}</div>
                 </div>
                 <div class="course-student">
                     <van-icon name="friends-o" size=".18rem"/>
@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="course-period">
-                <div class="period-btn" v-for="item in $store.state.course[0].period" :key="item" @click="priceSum">{{item}}课时</div>
+                <div class="period-btn" v-for="(item, i) in $store.state.course[0].period.periodTime" :key="i" @click="priceSum(i)">{{item}}课时</div>
             </div>
         </div>
         <div class="course-detail-container">
@@ -37,11 +37,23 @@
 
 <script>
 export default {
-    props: [item],
+    props: {
+        // coursePriceSum: Number,
+    },
+    data() {
+
+    },
     methods: {
-        priceSum(item){
-            
+        priceSum(i){
+            // this.coursePriceSum = item * this.coursePrice;
+            this.$emit('itemclick', i);
         }
+    },
+    computed: {
+
+    },
+    watch: {
+
     }
 }
 </script>
