@@ -35,10 +35,14 @@
                         />
                     </van-popup>
                 </div>
+<<<<<<< HEAD
                 <product-info
                  :coursePriceSum="coursePriceSum" 
                  @itemclick="infoClick">
                 </product-info>
+=======
+                <product-info :priceCount="priceCount"></product-info>
+>>>>>>> 56e064cf39e676d0137899e7712a46d883eced78
             </div>
         </div>
         <product-bottom></product-bottom>
@@ -47,8 +51,14 @@
 
 <script>
 import ProductBottom from '@/components/purchase_bottom.vue'
+<<<<<<< HEAD
 import ProductNav from '@/components/product_nav.vue'
 import ProductInfo from '@/components/product_info.vue'
+=======
+import ProductNav from '@/components/nav.vue'
+import ProductInfo from '@/components/course.vue'
+
+>>>>>>> 56e064cf39e676d0137899e7712a46d883eced78
 export default {
     components: {
         'product-bottom': ProductBottom,
@@ -60,7 +70,15 @@ export default {
             showList: false,
             chosenCoupon: -1,
             disabledCoupons: [],
+<<<<<<< HEAD
             coursePriceSum: this.$store.state.course[0].period.price[0]
+=======
+            course: {
+                price: 139.7,
+                student: 53,
+            },
+            priceCount: 0,
+>>>>>>> 56e064cf39e676d0137899e7712a46d883eced78
         }
     },
     methods: {

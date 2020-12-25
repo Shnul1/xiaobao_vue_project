@@ -12,7 +12,7 @@ export default new Vuex.Store({
     course: [
       { 
         id: 1, 
-        url: "/img/course.74efb09c.jpg",
+        url: "/img/course.jpg",
         courseClass: "英语教育系列课程",  
         name: "少儿英语A1班",
         date: "8月26日-9月1日", 

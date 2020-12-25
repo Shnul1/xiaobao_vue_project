@@ -38,10 +38,7 @@
 <script>
 export default {
     props: {
-        // coursePriceSum: Number,
-    },
-    data() {
-
+        priceCount: Number
     },
     methods: {
         priceSum(i){
