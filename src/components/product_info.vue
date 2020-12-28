@@ -42,7 +42,6 @@ export default {
     },
     methods: {
         priceSum(i){
-            // this.coursePriceSum = item * this.coursePrice;
             this.$emit('itemclick', i);
         }
     },

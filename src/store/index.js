@@ -6,8 +6,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     student: [
-      {id:1, name:"周可寒", useCoupon: []},
-      {id:2, name:"王梓晨", useCoupon: []}
+      {id:1, studentId:1701, name:"周可寒", useCoupon: []},
+      {id:2, studentId:1702, name:"王梓晨", useCoupon: []}
     ],
     course: [
       { 
@@ -43,7 +43,7 @@ export default new Vuex.Store({
         id: 2,
         condition: '满 200元 使用',
         reason: '订单未满200元',
-        value: 2000*100,
+        value: 200*100,
         name: '新年优惠促销',
         startAt: 1559104000,
         endAt: 1574592000,
@@ -54,7 +54,7 @@ export default new Vuex.Store({
         id: 3,
         condition: '满 500元 使用',
         reason: '订单未满500元',
-        value: 1000*100,
+        value: 300*100,
         name: '新年优惠促销',
         startAt: 1559104000,
         endAt: 1574592000,
@@ -63,13 +63,13 @@ export default new Vuex.Store({
       }
     ]
   },
-    mutations: {
+  mutations: {
       
-    },//同步操作
-    actions: {
+  },//同步操作
+  actions: {
 
-    },//异步操作
-    modules: {
+  },//异步操作
+  modules: {
 
-    }
+  }
 })

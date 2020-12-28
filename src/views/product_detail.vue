@@ -141,26 +141,8 @@ export default {
         }
     }
     .coupon-container{
-    width: 100%;
-    height: .5rem;
-        .coupon-cell{
-            height: .5rem;
-        }
-        .coupon-list{
-            .van-coupon__amount{
-                width: 47px;
-                height: 24px;
-                font-size: 26px;
-                font-family: PingFangSC-Medium, PingFang SC;
-                font-weight: 500;
-                color: #FF340F;
-                line-height: 24px;
-                text-shadow: 0px 2px 6px rgba(203, 202, 202, 0.5);
-            }
-            .van-coupon__condition{
-
-            }
-        }
+        width: 100%;
+        height: .5rem;
     }
 }
 </style>

@@ -19,12 +19,14 @@
 export default {
     data(){
         return {
-            title: "商品详情"
+            title: "领取优惠券"
         }
     },
     methods: {
         exit() {
-            this.$router.push({ path: 'coupon' })
+            // this.$router.push({ path: 'home' })
+
+            console.log("退出成功！")
         }
     }
 }
@@ -56,7 +58,7 @@ export default {
             }
         }
         .nav-center{
-            width: .64rem;
+            width: .8rem;
             height: .22rem;
             font-size: .16rem;
             font-family: PingFangSC-Medium, PingFang SC;
