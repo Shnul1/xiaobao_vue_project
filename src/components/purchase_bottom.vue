@@ -5,8 +5,8 @@
             <div class="shopping-cart-text">购物车</div>
         </div>
         <div class="shopping-cart-slider">
-            <div class="shopping-cart-slider-left" @click="addToCart">加入购物车</div>
-            <div class="shopping-cart-slider-right" @click="buyCourse">领券购买</div>
+            <div class="shopping-cart-slider-left">加入购物车</div>
+            <div class="shopping-cart-slider-right">领券购买</div>
         </div>
     </div>
 </template>

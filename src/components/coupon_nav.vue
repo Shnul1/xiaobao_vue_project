@@ -2,7 +2,10 @@
     <div class="product-nav">
         <div class="product-nav-container">
             <div class="nav-left">
-                <van-icon name="arrow-left" size='.18rem' class="nav-back-icon"/>
+                <van-icon name="arrow-left" 
+                size='.18rem' 
+                class="nav-back-icon"
+                @click="backToProduct('product')"/>
             </div>
             <div class="nav-center">{{title}}</div>
             <div class="nav-right">
@@ -25,10 +28,17 @@ export default {
     methods: {
         exit() {
             // this.$router.push({ path: 'home' })
-
             console.log("退出成功！")
+        },
+        backToProduct(path) {
+            this.$router.push(path)
         }
-    }
+    },
+    watch: {
+        '$router' (to, from) {
+            this.getInit();
+        }
+	}
 }
 </script>
 

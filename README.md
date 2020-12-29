@@ -15,5 +15,6 @@ npm run serve
 npm run build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Vue常见题目：
+
+https://juejin.cn/post/6872653732753080333

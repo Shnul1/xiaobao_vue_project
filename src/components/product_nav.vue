@@ -2,7 +2,10 @@
     <div class="product-nav">
         <div class="product-nav-container">
             <div class="nav-left">
-                <van-icon name="arrow-left" size='.18rem' class="nav-back-icon"/>
+                <van-icon name="arrow-left" 
+                size='.18rem' 
+                class="nav-back-icon"
+                @click="back()"/>
             </div>
             <div class="nav-center">{{title}}</div>
             <div class="nav-right">
@@ -23,10 +26,19 @@ export default {
         }
     },
     methods: {
+        back() {
+            this.$router.push({ path: 'coupon' }).catch(err => {err})
+        },
         exit() {
-            this.$router.push({ path: 'coupon' })
+            console.log("退出成功！")
         }
-    }
+    },
+    watch: {
+	'$router' (to, from) {
+		// 监听路由参数变化，重新加载数据
+		this.getInit();
+	}
+}
 }
 </script>
 

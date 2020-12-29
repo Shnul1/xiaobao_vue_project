@@ -19,7 +19,13 @@
                 </div>
             </div>
             <div class="course-period">
-                <div class="period-btn" v-for="(item, i) in $store.state.course[0].period.periodTime" :key="i" @click="priceSum(i)">{{item}}课时</div>
+                <div class="period-btn" 
+                v-for="(item, i) in $store.state.course[0].period.periodTime" 
+                :key="i" 
+                @click="priceSum(i)"
+                >
+                {{item}}课时
+                </div>
             </div>
         </div>
         <div class="course-detail-container">
@@ -37,9 +43,6 @@
 
 <script>
 export default {
-    props: {
-        priceCount: Number
-    },
     methods: {
         priceSum(i){
             this.$emit('itemclick', i);

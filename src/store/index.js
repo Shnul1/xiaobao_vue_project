@@ -30,41 +30,52 @@ export default new Vuex.Store({
     coupons: [
       {
         id: 1,
-        condition: '满 100元 使用',
+        condition: '满100元使用',
         reason: '订单未满100元',
-        value: 100*100,
+        value: 20*100,
         name: '新年优惠促销',
         startAt: 1557910400,
         endAt: 1574592000,
         valueDesc: '100',
         unitDesc: '元',
+        studentCondition: '周可寒、王梓晨均可使用此优惠券'
       },
       {
         id: 2,
-        condition: '满 200元 使用',
+        condition: '满200元使用',
         reason: '订单未满200元',
-        value: 200*100,
+        value: 40*100,
         name: '新年优惠促销',
         startAt: 1559104000,
         endAt: 1574592000,
         valueDesc: '200',
         unitDesc: '元',
+        studentCondition: '周可寒、王梓晨均可使用此优惠券'
       },
       {
         id: 3,
-        condition: '满 500元 使用',
+        condition: '满500元使用',
         reason: '订单未满500元',
-        value: 300*100,
+        value: 100*100,
         name: '新年优惠促销',
         startAt: 1559104000,
         endAt: 1574592000,
         valueDesc: '500',
         unitDesc: '元',
+        studentCondition: '周可寒、王梓晨均可使用此优惠券'
       }
+    ],
+    useCoupons: [
+
+    ],
+    disCoupons: [
+
     ]
   },
   mutations: {
-      
+      drewCoupon(state){
+        useCoupons.push(state)
+      }
   },//同步操作
   actions: {
 

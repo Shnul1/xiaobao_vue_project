@@ -1,7 +1,7 @@
 <template>
     <div>
         <coupon-nav></coupon-nav>
-        <coupon-info></coupon-info>
+        <coupon-info @itemClick="couponClick"></coupon-info>
     </div>
 </template>
 
@@ -14,8 +14,18 @@ export default {
     components: {
         'coupon-nav': CouponNav,
         'coupon-info': CouponInfo
+    },
+    data() {
+        return {
+
+        }
+    },
+    methods: {
+        couponClick(index) {
+            console.log(index)
+        }
     }
-}
+}   
 </script>
 
 <style scoped>
