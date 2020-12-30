@@ -23,7 +23,7 @@
                         v-model="showList"
                         round
                         position="bottom"
-                        style="height: 60%; padding-top: 3px;"
+                        style="height: 60%; padding-top: 3px; overflow: auto;"
                         >
                         <van-coupon-list
                             class="coupon-list"
@@ -31,6 +31,7 @@
                             :chosen-coupon="chosenCoupon"
                             :disabled-coupons="disabledCoupons"
                             :show-exchange-bar="false"
+                            :show-close-button="false"
                             @change="onChange"
                         />
                     </van-popup>

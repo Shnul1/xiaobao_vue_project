@@ -38,7 +38,9 @@ export default new Vuex.Store({
         endAt: 1574592000,
         valueDesc: '100',
         unitDesc: '元',
-        studentCondition: '周可寒、王梓晨均可使用此优惠券'
+        flag: true,
+        status: ["领取", "去使用"],
+        description: '周可寒、王梓晨均可使用此优惠券'
       },
       {
         id: 2,
@@ -50,7 +52,9 @@ export default new Vuex.Store({
         endAt: 1574592000,
         valueDesc: '200',
         unitDesc: '元',
-        studentCondition: '周可寒、王梓晨均可使用此优惠券'
+        flag: true,
+        status: ["领取", "去使用"],
+        description: '周可寒、王梓晨均可使用此优惠券'
       },
       {
         id: 3,
@@ -62,8 +66,10 @@ export default new Vuex.Store({
         endAt: 1574592000,
         valueDesc: '500',
         unitDesc: '元',
-        studentCondition: '周可寒、王梓晨均可使用此优惠券'
-      }
+        flag: true,
+        status: ["领取", "去使用"],
+        description: '周可寒、王梓晨均可使用此优惠券'
+      },
     ],
     useCoupons: [
 
@@ -73,8 +79,11 @@ export default new Vuex.Store({
     ]
   },
   mutations: {
-      drewCoupon(state){
-        useCoupons.push(state)
+      // drewCoupon(state){
+      //   useCoupons.push(state)
+      // }
+      changeFlag(state){
+        state
       }
   },//同步操作
   actions: {

@@ -16,12 +16,18 @@
                     <div class="coupon-name">{{$store.state.coupons[index].name}}</div>
                     <div class="coupon-time">{{$store.state.coupons[index].startAt}}</div>
                 </div>
-                <div @click="drewCoupon(index)" 
-                :class="[isActive ? 'coupon-right-t':'coupon-right-f']">
+                <!-- <div class="coupon-right-t"
+                @click="drewCoupon(index)" 
+                :class="{'coupon-right-f':index === activeIndex}">
+                </div> -->
+                <div
+                @click="drewCoupon(index)" 
+                :class="$store.state.coupons[index].flag ? 'coupon-right-t' : 'coupon-right-f'"
+                >{{$store.state.coupons[index].status[0]}}
                 </div>
             </div>
             <div class="coupon-discription">
-                <div class="coupon-discription-text">{{$store.state.coupons[index].studentCondition}}</div>
+                <div class="coupon-discription-text">{{$store.state.coupons[index].description}}</div>
             </div>
         </div>
     </div>
@@ -31,17 +37,30 @@
 export default { 
     data() {
         return {
-            isActive: [true, true, true]
+            //  activeIndex: -1
+            isHave: [true, true, true]
         }
     },
     methods: {
+        // drewCoupon(index){
+        //     this.activeIndex = index;
+        //     this.$emit('itemClick', index);
+        // }
+        // drewCoupon(index){
+        //     this.$nextTick(()=>{
+        //         this.isHave[index] = !this.isHave[index];
+        //     console.log(this.isHave);
+        //     console.log(index)
+        //     this.$emit('itemClick', index);
+        //     })
+        // }
         drewCoupon(index){
+            this.isHave[index] = !this.isHave[index];
             this.$emit('itemClick', index);
-            this.isActive[index] = !this.isActive[index];
-        }
+            }
     },
     watch: {
-
+        
     },
 }
 </script>
