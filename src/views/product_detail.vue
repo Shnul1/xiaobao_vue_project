@@ -43,6 +43,9 @@
             </div>
         </div>
         <product-bottom></product-bottom>
+        <transition name="slide">
+            <router-view></router-view>
+        </transition>
     </div>
 </template>
 
@@ -145,5 +148,17 @@ export default {
         width: 100%;
         height: .5rem;
     }
+}
+
+.slide-enter{
+    right: -100%;
+}
+
+.slide-enter-active{
+    transition: right 0.15s linear;
+}
+
+.slide-enter-to{
+    right: 0;
 }
 </style>

@@ -5,7 +5,7 @@
                 <van-icon name="arrow-left" 
                 size='.18rem' 
                 class="nav-back-icon"
-                @click="backToProduct('product')"/>
+                @click="backToProduct('/product')"/>
             </div>
             <div class="nav-center">{{title}}</div>
             <div class="nav-right">

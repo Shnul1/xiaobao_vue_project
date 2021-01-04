@@ -6,7 +6,7 @@
         </div>
         <div class="shopping-cart-slider">
             <div class="shopping-cart-slider-left">加入购物车</div>
-            <div class="shopping-cart-slider-right" @click="toPurchase('/productpurchase')">领券购买</div>
+            <div class="shopping-cart-slider-right" @click="toPurchase('/product/purchase')">领券购买</div>
         </div>
     </div>
 </template>

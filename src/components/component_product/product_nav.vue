@@ -27,7 +27,7 @@ export default {
     },
     methods: {
         back() {
-            this.$router.push({ path: 'coupon' }).catch(err => {err})
+            this.$router.push({ path: '/coupon' }).catch(err => {err})
         },
         exit() {
             console.log("退出成功！")

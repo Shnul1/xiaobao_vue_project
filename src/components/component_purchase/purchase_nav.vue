@@ -5,7 +5,7 @@
                 <van-icon name="arrow-left" 
                 size='.18rem' 
                 class="nav-back-icon"
-                @click="backToProduct('product')"/>
+                @click="backToProduct('/product')"/>
             </div>
             <div class="nav-center">{{title}}</div>
             <div class="nav-right">
@@ -31,7 +31,7 @@ export default {
             console.log("退出成功！")
         },
         backToProduct(path) {
-            this.$router.push(path)
+            this.$router.replace(path)
         }
     },
     watch: {

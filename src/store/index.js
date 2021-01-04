@@ -78,7 +78,12 @@ export default new Vuex.Store({
   mutations: {
       changeFlag(state, index){
         state.coupons[index].status = "去使用";
+      },
+      drewCoupon(state, ){
+        
       }
+
+
   },//同步操作
   actions: {
 
