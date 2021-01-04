@@ -5,9 +5,11 @@ import store from './store'
 import './plugins/vant'
 import './assets/css/global.css'
 import product from './views/product_detail'
+import axios from 'axios'; 
 
 Vue.config.productionTip = false
 Vue.component('product', product)
+Vue.prototype.$http = axios;
 
 new Vue({
   router,

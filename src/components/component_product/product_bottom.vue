@@ -6,7 +6,7 @@
         </div>
         <div class="shopping-cart-slider">
             <div class="shopping-cart-slider-left">加入购物车</div>
-            <div class="shopping-cart-slider-right">领券购买</div>
+            <div class="shopping-cart-slider-right" @click="toPurchase('/productpurchase')">领券购买</div>
         </div>
     </div>
 </template>
@@ -19,7 +19,9 @@ export default {
         }
     },
     methods: {
-
+        toPurchase(path){
+            this.$router.push(path)
+        }
     }
 }
 </script>
@@ -41,7 +43,7 @@ export default {
         .shopping-cart-icon{
             width: .34rem;
             height: .34rem;
-            background-image: url(../assets/images/shioppingcart.png);
+            background-image: url(../../assets/images/shioppingcart.png);
         }
         .shopping-cart-text{
             height: .14rem;

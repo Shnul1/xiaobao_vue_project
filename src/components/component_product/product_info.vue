@@ -241,7 +241,7 @@ export default {
                 width: 3.45rem;
                 height: 1.82rem;
                 margin: 0.1rem .08rem 0 .08rem;
-                background-image: url(../assets/images/studentdetail.jpg);
+                background-image: url(../../assets/images/studentdetail.jpg);
             }
         }
 

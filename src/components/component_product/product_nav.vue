@@ -5,13 +5,13 @@
                 <van-icon name="arrow-left" 
                 size='.18rem' 
                 class="nav-back-icon"
-                @click="backToProduct('product')"/>
+                @click="back()"/>
             </div>
             <div class="nav-center">{{title}}</div>
             <div class="nav-right">
                 <div class="nav-right-icon">
-                    <img src="../assets/images/退出.png" class="exit-icon" @click="exit()">
-                    <img src="../assets/images/详情.png" class="detail-icon">
+                    <img src="../../assets/images/退出.png" class="exit-icon" @click="exit()">
+                    <img src="../../assets/images/详情.png" class="detail-icon">
                 </div>
             </div>
         </div>
@@ -22,23 +22,23 @@
 export default {
     data(){
         return {
-            title: "领取优惠券"
+            title: "商品详情"
         }
     },
     methods: {
-        exit() {
-            // this.$router.push({ path: 'home' })
-            console.log("退出成功！")
+        back() {
+            this.$router.push({ path: 'coupon' }).catch(err => {err})
         },
-        backToProduct(path) {
-            this.$router.push(path)
+        exit() {
+            console.log("退出成功！")
         }
     },
     watch: {
-        '$router' (to, from) {
-            this.getInit();
-        }
+	'$router' (to, from) {
+		// 监听路由参数变化，重新加载数据
+		this.getInit();
 	}
+}
 }
 </script>
 
@@ -68,7 +68,7 @@ export default {
             }
         }
         .nav-center{
-            width: .8rem;
+            width: .64rem;
             height: .22rem;
             font-size: .16rem;
             font-family: PingFangSC-Medium, PingFang SC;

@@ -47,9 +47,9 @@
 </template>
 
 <script>
-import ProductBottom from '@/components/purchase_bottom.vue'
-import ProductNav from '@/components/product_nav.vue'
-import ProductInfo from '@/components/product_info.vue'
+import ProductBottom from '@/components/component_product/product_bottom.vue'
+import ProductNav from '@/components/component_product/product_nav.vue'
+import ProductInfo from '@/components/component_product/product_info.vue'
 export default {
     components: {
         'product-bottom': ProductBottom,

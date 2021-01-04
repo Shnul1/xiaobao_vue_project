@@ -3,7 +3,7 @@
         <div style="height:.44rem"></div>
         <div class="coupon-container" 
         v-for="(item, index) in $store.state.coupons" 
-        :key="index">
+        :key="item.id">
             <div class="coupon">
                 <div class="coupon-left">
                     <div class="coupon-value">
@@ -16,14 +16,11 @@
                     <div class="coupon-name">{{$store.state.coupons[index].name}}</div>
                     <div class="coupon-time">{{$store.state.coupons[index].startAt}}</div>
                 </div>
-                <!-- <div class="coupon-right-t"
-                @click="drewCoupon(index)" 
-                :class="{'coupon-right-f':index === activeIndex}">
-                </div> -->
                 <div
                 @click="drewCoupon(index)" 
-                :class="$store.state.coupons[index].flag ? 'coupon-right-t' : 'coupon-right-f'"
-                >{{$store.state.coupons[index].status[0]}}
+                :class="status[index].isHave ? 'coupon-right-t' : 'coupon-right-f'"
+                >
+                {{$store.state.coupons[index].status}}
                 </div>
             </div>
             <div class="coupon-discription">
@@ -37,27 +34,24 @@
 export default { 
     data() {
         return {
-            //  activeIndex: -1
-            isHave: [true, true, true]
+            status: [
+                {id: 1, isHave: true},
+                {id: 2, isHave: true},
+                {id: 3, isHave: true}
+            ]
         }
     },
     methods: {
-        // drewCoupon(index){
-        //     this.activeIndex = index;
-        //     this.$emit('itemClick', index);
-        // }
-        // drewCoupon(index){
-        //     this.$nextTick(()=>{
-        //         this.isHave[index] = !this.isHave[index];
-        //     console.log(this.isHave);
-        //     console.log(index)
-        //     this.$emit('itemClick', index);
-        //     })
-        // }
         drewCoupon(index){
-            this.isHave[index] = !this.isHave[index];
-            this.$emit('itemClick', index);
+            if(this.status[index].isHave){
+                this.status[index].isHave = !this.status[index].isHave;
+                this.$store.commit('changeFlag', index);
+            }else if(!this.status[index].isHave){
+                this.$router.push({ path: 'product' })
             }
+            this.$emit('itemClick', index);
+
+        },
     },
     watch: {
         

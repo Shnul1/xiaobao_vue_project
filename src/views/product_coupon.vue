@@ -6,10 +6,8 @@
 </template>
 
 <script>
-import CouponNav from '@/components/coupon_nav.vue'
-import CouponInfo from '@/components/coupon_info.vue';
-import Coupon_nav from '../components/coupon_nav.vue';
-import Coupon_info from '../components/coupon_info.vue';
+import CouponNav from '@/components/component_coupon/coupon_nav.vue'
+import CouponInfo from '@/components/component_coupon/coupon_info.vue';
 export default {
     components: {
         'coupon-nav': CouponNav,

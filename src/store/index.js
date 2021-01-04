@@ -12,7 +12,7 @@ export default new Vuex.Store({
     course: [
       { 
         id: 1, 
-        url: "/img/course.74efb09c.jpg",
+        url: require("../assets/images/course.jpg"),
         courseClass: "英语教育系列课程",  
         name: "少儿英语A1班",
         date: "8月26日-9月1日", 
@@ -36,10 +36,9 @@ export default new Vuex.Store({
         name: '新年优惠促销',
         startAt: 1557910400,
         endAt: 1574592000,
-        valueDesc: '100',
+        valueDesc: '20',
         unitDesc: '元',
-        flag: true,
-        status: ["领取", "去使用"],
+        status: '领取',
         description: '周可寒、王梓晨均可使用此优惠券'
       },
       {
@@ -50,10 +49,9 @@ export default new Vuex.Store({
         name: '新年优惠促销',
         startAt: 1559104000,
         endAt: 1574592000,
-        valueDesc: '200',
+        valueDesc: '40',
         unitDesc: '元',
-        flag: true,
-        status: ["领取", "去使用"],
+        status: '领取',
         description: '周可寒、王梓晨均可使用此优惠券'
       },
       {
@@ -64,10 +62,9 @@ export default new Vuex.Store({
         name: '新年优惠促销',
         startAt: 1559104000,
         endAt: 1574592000,
-        valueDesc: '500',
+        valueDesc: '100',
         unitDesc: '元',
-        flag: true,
-        status: ["领取", "去使用"],
+        status: '领取',
         description: '周可寒、王梓晨均可使用此优惠券'
       },
     ],
@@ -79,11 +76,8 @@ export default new Vuex.Store({
     ]
   },
   mutations: {
-      // drewCoupon(state){
-      //   useCoupons.push(state)
-      // }
-      changeFlag(state){
-        state
+      changeFlag(state, index){
+        state.coupons[index].status = "去使用";
       }
   },//同步操作
   actions: {
