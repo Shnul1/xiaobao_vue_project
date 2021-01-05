@@ -1,7 +1,6 @@
 <template>
-    <div class="purchase_popup">
+    <div class="purchase-popup">
         <purchase-nav></purchase-nav>
-        <div style="height:.44rem"></div>
         <purchase-info></purchase-info>
         <purchase-bottom></purchase-bottom>
     </div>
@@ -21,7 +20,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.purchase_popup{
+.purchase-popup{
     display: flex;
     justify-content: center;
     width: 100%;
@@ -30,7 +29,6 @@ export default {
     top: 0;
     background: #FFFFFF;
     z-index: 999;
-    
 }
 
 </style>

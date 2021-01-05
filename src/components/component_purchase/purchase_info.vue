@@ -1,12 +1,17 @@
 <template>
-    <main>
-        <div class="student-info"></div>
-        <div class="school-name"></div>
+    <div class="purchase-content">
+        <div class="student-info">
+            <div class="student-info-title"></div>
+            <div class="student-name"></div>
+        </div>
+        <div class="school-name">
+
+        </div>
         <div class="course-class">
             <div class="course-class-icon">班</div>
             <div class="course-class-name">{{$store.state.course[0].name}}</div>
         </div>
-    </main>
+    </div>
 </template>
 
 <script>
@@ -17,7 +22,14 @@ export default {
 
 <style lang="less" scoped>
 
-
+.purchase-content{
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 1.12rem);
+    background: #FFFFFF;
+    margin-top: .44rem;
+    flex-direction: column;
+}
 
 .course-class{
     display: flex;
