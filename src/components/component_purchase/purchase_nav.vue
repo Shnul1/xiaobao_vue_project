@@ -1,5 +1,5 @@
 <template>
-    <div class="product-nav">
+    <header class="product-nav">
         <div class="product-nav-container">
             <div class="nav-left">
                 <van-icon name="arrow-left" 
@@ -15,7 +15,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </header>
 </template>
 
 <script>

@@ -43,7 +43,7 @@
             </div>
         </div>
         <product-bottom></product-bottom>
-        <transition name="slide">
+        <transition name="slide" mode="out-in">
             <router-view></router-view>
         </transition>
     </div>
@@ -150,15 +150,15 @@ export default {
     }
 }
 
-.slide-enter{
+.slide-enter, .slide-leave-to{
     right: -100%;
 }
 
-.slide-enter-active{
-    transition: right 0.15s linear;
+.slide-enter-active, .slide-leave-active{
+    transition: right .1s linear;
 }
 
-.slide-enter-to{
+.slide-enter-to, .slide-leave{
     right: 0;
 }
 </style>
