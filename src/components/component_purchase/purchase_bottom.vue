@@ -47,7 +47,6 @@ export default {
     min-width: 13%;
     height: .2rem;
     font-size: .14rem;
-    font-family: PingFangSC-Regular, PingFang SC;
     font-weight: 400;
     color: #4A4A4A;
     line-height: .2rem;
@@ -73,7 +72,6 @@ export default {
                 width: .28rem;
                 height: .2rem;
                 font-size: .14rem;
-                font-family: PingFangSC-Regular, PingFang SC;
                 font-weight: 400;
                 color: #4A4A4A;
                 line-height: .2rem;
@@ -82,7 +80,6 @@ export default {
                 width: .14rem;
                 height: .24rem;
                 font-size: .12rem;
-                font-family: PingFangSC-Regular, PingFang SC;
                 font-weight: 500;
                 color: #FF340F;
                 line-height: .24rem;
@@ -91,7 +88,6 @@ export default {
                 min-width: .42rem;
                 height: .24rem;
                 font-size: .16rem;
-                font-family: PingFangSC-Medium, PingFang SC;
                 font-weight: 500;
                 color: #FF340F;
                 line-height: .24rem;
@@ -106,7 +102,6 @@ export default {
         text-align: center;
         line-height: .44rem;
         font-size: .16rem;
-        font-family: PingFangSC-Medium, PingFang SC;
         font-weight: 500;
         color: #FFFFFF;
     }

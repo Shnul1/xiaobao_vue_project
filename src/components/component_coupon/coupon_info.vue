@@ -50,7 +50,6 @@ export default {
                 this.$router.push({ path: 'product' })
             }
             this.$emit('itemClick', index);
-
         },
     },
     watch: {

@@ -15,13 +15,18 @@ export default {
     },
     data() {
         return {
-
+            user: 
+            {
+                id:1, 
+                studentId:1701, 
+                name:"周可寒", 
+            }
         }
     },
     methods: {
         couponClick(index) {
-            console.log(index)
-        }
+             this.$store.commit('drewCoupon', [this.user, index]);
+        } 
     }
 }   
 </script>

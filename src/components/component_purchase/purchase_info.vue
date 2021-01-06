@@ -73,6 +73,7 @@ export default {
     width: 94.67%;
     height: 11.09%;
     margin: 1.5% 2.67% 0;
+    border-top: .03rem #66b4fd solid;
     .student-info-container{
         display: flex;
         flex-direction: column;
@@ -101,7 +102,6 @@ export default {
                 min-width: .24rem;
                 height: .18rem;
                 font-size: .12rem;
-                font-family: PingFangSC-Regular, PingFang SC;
                 font-weight: 400;
                 color: #151E26;
                 line-height: .18rem;
@@ -115,7 +115,6 @@ export default {
                 width: .77rem;
                 height: .18rem;
                 font-size: .12rem;
-                font-family: PingFangSC-Regular, PingFang SC;
                 font-weight: 400;
                 color: #151E26;
                 line-height: .18rem;

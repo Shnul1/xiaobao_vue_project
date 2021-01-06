@@ -6,8 +6,18 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     student: [
-      {id:1, studentId:1701, name:"周可寒", useCoupon: []},
-      {id:2, studentId:1702, name:"王梓晨", useCoupon: []}
+      {
+        id:1, 
+        studentId:1701, 
+        name:"周可寒", 
+        useCoupon: []
+      },
+      {
+        id:2, 
+        studentId:1702, 
+        name:"王梓晨", 
+        useCoupon: []
+      }
     ],
     course: [
       { 
@@ -68,21 +78,25 @@ export default new Vuex.Store({
         description: '周可寒、王梓晨均可使用此优惠券'
       },
     ],
-    useCoupons: [
-
-    ],
-    disCoupons: [
-
-    ]
   },
   mutations: {
       changeFlag(state, index){
         state.coupons[index].status = "去使用";
       },
-      drewCoupon(state, ){
-        
+      drewCoupon(state, para){
+        if(state.student[para[0].id].useCoupon.length == 0){
+          state.student[para[0].id].useCoupon.push(state.coupons[para[1]]);
+        }else{
+          for (let i = 0; i < state.student[para[0].id].useCoupon.length; i++) {
+            if(state.coupons[para[1]] == state.student[para[0].id].useCoupon[i]){
+              break;
+            }else{
+              state.student[para[0].id].useCoupon.push(state.coupons[para[1]]);
+              break;
+            }
+          }
+        }
       }
-
 
   },//同步操作
   actions: {
