@@ -7,6 +7,10 @@ Vue.use(VueRouter)
 
 const routes = [
   {
+    path: '/',
+    redirect: '/coupon'
+  },
+  {
     path: '/product',
     name: 'product',
     component: Product,
@@ -23,11 +27,6 @@ const routes = [
      name: 'coupon',
      component: () => import('../views/product_coupon.vue')
   },
-  // {
-  //   path: '/productpurchase',
-  //   name: 'productpurchase',
-  //   component: ProductPurchase,
-  // }
 ]
 
 const router = new VueRouter({ 
